@@ -5,12 +5,12 @@
 }
 
 body{
-    background-color: beige;
+    background-color: white;
     height: 100vh;
     width: 100vw;
 }
 
-container{
+#container{
     height: 100%;
     width: 100%;
     display: flex;
