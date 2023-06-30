@@ -1,0 +1,163 @@
+:root{
+    --button-background-color: rgb(0, 170, 255);
+    --search-bar-background-color: rgb(232, 232, 232);
+    --button-text-color: white;
+    --search-bar-text-color: black;
+}
+
+#header{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.419);
+    width: 80vw;
+    overflow: hidden;
+}
+
+#top-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+#search-bar{
+    display: flex;
+    width: 40%;
+    height: 100px;
+    padding-left: 25px;
+    gap: 25px;
+    align-items: center;
+}
+
+#search-icon{
+    color: black;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+#search-input{
+    border: 0px solid black;
+    border-radius: 20px;
+    background-color: var(--search-bar-background-color);
+    width: 80%;
+    font-size: 16px;
+    padding: 3px;
+    padding-left: 10px;
+}
+
+#search-input:focus{
+    outline-color: var(--button-background-color);
+}
+
+#top-header-end{
+    display: flex;
+    gap: 40px;
+    margin-right: 20px;
+    height: 100%;
+    align-items: center;
+}
+
+#bell-icon{
+    height: 30px;
+    width: 30px;
+}
+
+#bell-icon:hover{
+    color: red;
+    transition: .5s linear;
+    cursor: pointer;
+}
+
+#profile-picture-md{
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#name-text{
+    user-select: none;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+#name-text:hover{
+    color: red;
+    transition: .5s linear;
+}
+
+#bot-header{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 25px;
+}
+
+#profile-info-container{
+    display: flex;
+    gap: 20px;
+}
+
+#profile-picture-lg{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+span{
+    color: red;
+}
+
+#profile-info-text-container{
+    user-select: none;
+}
+
+#profile-info-top-text{
+    font-weight: 400;
+}
+
+#profile-info-main-text{
+    font-weight: 600;
+}
+
+#bot-header-buttons{
+    display: flex;
+    height: 100%;
+    width: auto;
+    align-items: center;
+    gap: 50px;
+    user-select: none;
+    margin-right: 50px;
+}
+
+
+.bot-header-button{
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    font-weight: 400;
+    padding: 10px;
+    font-size: 20px;
+    width: 100px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.bot-header-button:hover{
+    opacity: .7;
+    transition: .2s linear;
+}
+
+.bot-header-button:active{
+    opacity: .5;
+}
+
+.bot-header-button:focus{
+    transition: .2s linear;
+    opacity: .7;
+}

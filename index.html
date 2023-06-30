@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Odin Project Dashboard</title>
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="container">
@@ -33,7 +39,7 @@
             <h3 class="sidebar-text">Home</h3>
           </div>
           <div class="sidebar-item">
-            <div class="sidebar-icon">
+            <label class="sidebar-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -46,7 +52,7 @@
                   clip-rule="evenodd"
                 />
               </svg>
-            </div>
+            </label>
             <h3 class="sidebar-text">Profile</h3>
           </div>
           <div class="sidebar-item">
@@ -177,21 +183,39 @@
         <div id="header">
           <div id="top-header">
             <div id="search-bar">
-              <img src="" alt="Search Icon" id="search-icon" />
+              <label for="search-input" id="search-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </label>
               <input type="text" id="search-input" />
             </div>
             <div id="top-header-end">
-              <img src="" alt="Bell Icon" id="bell-icon" />
-              <img src="" alt="Profile Picture" id="profile-picture-md" />
+              <div id="bell-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path d="M5.85 3.5a.75.75 0 00-1.117-1 9.719 9.719 0 00-2.348 4.876.75.75 0 001.479.248A8.219 8.219 0 015.85 3.5zM19.267 2.5a.75.75 0 10-1.118 1 8.22 8.22 0 011.987 4.124.75.75 0 001.48-.248A9.72 9.72 0 0019.266 2.5z" />
+                    <path fill-rule="evenodd" d="M12 2.25A6.75 6.75 0 005.25 9v.75a8.217 8.217 0 01-2.119 5.52.75.75 0 00.298 1.206c1.544.57 3.16.99 4.831 1.243a3.75 3.75 0 107.48 0 24.583 24.583 0 004.83-1.244.75.75 0 00.298-1.205 8.217 8.217 0 01-2.118-5.52V9A6.75 6.75 0 0012 2.25zM9.75 18c0-.034 0-.067.002-.1a25.05 25.05 0 004.496 0l.002.1a2.25 2.25 0 11-4.5 0z" clip-rule="evenodd" />
+                  </svg> 
+              </div>
+              <img src="/images/download.jpg" alt="Profile Picture" id="profile-picture-md" />
               <h3 id="name-text">Anton Harbers</h3>
             </div>
           </div>
           <div id="bot-header">
             <div id="profile-info-container">
-              <img src="" alt="Profile Picture" id="profile-picture-lg" />
+              <img src="/images/download.jpg" alt="Profile Picture" id="profile-picture-lg" />
               <div id="profile-info-text-container">
                 <h4 id="profile-info-top-text">Hi there,</h4>
-                <h2 id="profile-info-main-text">Anton Harbers (@tonybers)</h2>
+                <h2 id="profile-info-main-text">Anton Harbers (<span>@</span>tonybers)</h2>
               </div>
             </div>
             <div id="bot-header-buttons">
@@ -201,7 +225,9 @@
             </div>
           </div>
         </div>
-        <div id="dashboard-container"></div>
+        <div id="dashboard-container">
+            <!-- The main content will be a grid view -->
+        </div>
       </div>
     </div>
   </body>
