@@ -6,7 +6,8 @@
 }
 
 #header{
-    height: 200px;
+    height: auto;
+    padding-bottom: 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;

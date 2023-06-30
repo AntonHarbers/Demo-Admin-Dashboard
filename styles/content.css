@@ -1,0 +1,137 @@
+:root{
+    --button-background-color: rgb(0, 170, 255);
+    --search-bar-background-color: rgb(232, 232, 232);
+    --button-text-color: white;
+    --search-bar-text-color: black;
+}
+
+#dashboard-container{
+    height: 80vh;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "Projects Announcements"
+        "Projects Trending"
+    ;
+    background-color: var(--search-bar-background-color);
+}
+
+#projects-container{
+    overflow: hidden;
+    display: grid;
+    grid-area: Projects;
+    gap: 10px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 5% 30% 30% 30%;
+    grid-template-areas:   
+        "Header Header"
+        "Item1 Item2"
+        "Item3 Item4"
+        "Item5 Item6" 
+    ;
+
+}
+
+#announcements-container{
+    grid-area: Announcements;
+    display: flex;
+    flex-direction: column;
+}
+
+#trending-container{
+    grid-area: Trending;
+    display: flex;
+    flex-direction: column;
+}
+
+#item1{
+    grid-area: Item1;
+}
+
+#item2{
+    grid-area: Item2;
+}
+
+#item3{
+    grid-area: Item3;
+}
+
+#item4{
+    grid-area: Item4;
+}
+
+#item5{
+    grid-area: Item5;
+}
+
+#item6{
+    grid-area: Item6;
+}
+
+.gridPanel{
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.project-item{
+    background-color: white;
+    user-select: none;
+    padding: 20px;
+    border: 2px solid gray;
+    border-left: 5px solid red;
+    height: 80%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 20% 60% 20%;
+    grid-template-areas: 
+        "Header"
+        "Subheader"
+        "Buttons"
+    ;
+}
+
+.project-item:hover{
+    border: 2px solid var(--button-background-color);
+    border-left: 5px solid var(--button-background-color);
+
+    transition: .2s linear;
+}
+
+.project-item-header{
+    grid-area: Header;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.project-item-subheader{
+    grid-area: Subheader;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.project-item-buttons{
+    grid-area: Buttons;
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
+.project-item-button{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.project-item-button:hover{
+    color: var(--button-background-color);
+}
+
+
+
