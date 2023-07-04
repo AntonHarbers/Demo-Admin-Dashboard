@@ -10,7 +10,7 @@
     width: 80vw;
     display: grid;
     grid-template-columns: 75% 25%;
-    grid-template-rows: auto;
+    grid-template-rows: 50% 50%;
     grid-template-areas: 
         "Projects Announcements"
         "Projects Trending"
@@ -38,7 +38,6 @@
     grid-area: Announcements;
     display: flex;
     flex-direction: column;
-    height: 100px;
 }
 
 #trending-container{
@@ -140,8 +139,8 @@
     width: 95%;
     background-color: white;
     border-radius: 15px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -166,3 +165,53 @@
     font-size: 12px;
     color: gray;
 }
+
+#trending-parent{
+    margin-top: 10px;
+    width: 95%;
+    background-color: white;
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.trending-item{
+    border-bottom: 1px solid gray;
+    height: 100%;
+    width: 90%;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    user-select: none;
+}
+
+.trending-item>img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10%;
+}
+
+.trending-item-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-header{
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+.trending-name{
+    font-size: 12px;
+    font-weight: 300;
+}
+
