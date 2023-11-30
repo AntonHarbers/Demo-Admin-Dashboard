@@ -8,15 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
   </head>
   <body>
     <div id="container">
       <div id="sidebar">
         <div id="sidebar-title">
-          <img src="/images/logo.png" alt="heroIcon" />
+          <div class="logo"></div>
           <h1>Dashboard</h1>
         </div>
         <div id="sidebar-tabs">
@@ -197,7 +198,7 @@
                   />
                 </svg>
               </label>
-              <input type="text" id="search-input" />
+              <input type="text" maxlength="40" id="search-input" />
             </div>
             <div id="top-header-end">
               <div id="bell-icon">
@@ -218,24 +219,24 @@
                 </svg>
               </div>
               <img
-                src="/images/download.jpg"
+                src="images/profile-pic.png"
                 alt="Profile Picture"
                 id="profile-picture-md"
               />
-              <h3 id="name-text">Anton Harbers</h3>
+              <h3 id="name-text">User#1234</h3>
             </div>
           </div>
           <div id="bot-header">
             <div id="profile-info-container">
               <img
-                src="/images/download.jpg"
+                src="images/profile-pic.png"
                 alt="Profile Picture"
                 id="profile-picture-lg"
               />
               <div id="profile-info-text-container">
                 <h4 id="profile-info-top-text">Hi there,</h4>
                 <h2 id="profile-info-main-text">
-                  Anton Harbers (<span>@</span>tonybers)
+                  User#1234 (<span>@</span>coolUser)
                 </h2>
               </div>
             </div>
@@ -249,7 +250,7 @@
         <div id="dashboard-container">
           <!-- The main content will be a grid view -->
           <div class="gridPanel" id="projects-container">
-            Your Projects
+            <h3>Your Projects</h3>
             <div class="project-item" id="item1">
               <h2 class="project-item-header">Super Cool Project</h2>
               <p class="project-item-subheader">
@@ -582,60 +583,74 @@
             </div>
           </div>
           <div class="gridPanel" id="announcements-container">
-            Announcements
+            <h4>Announcements</h4>
             <div id="announcements-parent">
               <div class="announcement">
-                <h4 class="announcement-header">
-                  Site Maintenance
-                </h4>
+                <h4 class="announcement-header">Site Maintenance</h4>
                 <p class="announcement-content">
-                  harum porro quia recusandae error est aliquam voluptatum doloribus vero placeat numquam reiciendis velit eum, eligendi blanditiis! Provident.
+                  harum porro quia recusandae error est aliquam voluptatum
+                  doloribus vero placeat numquam reiciendis velit eum, eligendi
+                  blanditiis! Provident.
                 </p>
               </div>
               <div class="announcement">
-                <h4 class="announcement-header">
-                  Community Share Day
-                </h4>
+                <h4 class="announcement-header">Community Share Day</h4>
                 <p class="announcement-content">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime aut natus magnam, 
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Maxime aut natus magnam,
                 </p>
               </div>
               <div class="announcement">
-                <h4 class="announcement-header">
-                  Updated Privacy Policy
-                </h4>
+                <h4 class="announcement-header">Updated Privacy Policy</h4>
                 <p class="announcement-content">
-                  ecusandae error est aliquam voluptatum doloribus vero placeat numquam reiciendis velit eum, eligendi blanditiis! Provident.
+                  ecusandae error est aliquam voluptatum doloribus vero placeat
+                  numquam reiciendis velit eum, eligendi blanditiis! Provident.
                 </p>
               </div>
             </div>
           </div>
           <div class="gridPanel" id="trending-container">
-            Trending
+            <h4>Trending</h4>
             <div id="trending-parent">
               <div class="trending-item">
-                <img src="https://cdn.wallpapersafari.com/94/91/nOWf9k.jpeg" alt="trending1" class="trending-image"/>
+                <img
+                  src="https://cdn.wallpapersafari.com/94/91/nOWf9k.jpeg"
+                  alt="trending1"
+                  class="trending-image"
+                />
                 <div class="trending-item-text">
                   <h3 class="trending-header">@kitkat</h3>
                   <h4 class="trending-name">The real kitkat</h4>
                 </div>
               </div>
               <div class="trending-item">
-                <img src="https://img.freepik.com/free-photo/cat-white-background_155003-15381.jpg?w=2000" alt="trending2" class="trending-image"/>
+                <img
+                  src="https://img.freepik.com/free-photo/cat-white-background_155003-15381.jpg?w=2000"
+                  alt="trending2"
+                  class="trending-image"
+                />
                 <div class="trending-item-text">
                   <h3 class="trending-header">@catSleep</h3>
                   <h4 class="trending-name">Cats sleep all day</h4>
                 </div>
               </div>
               <div class="trending-item">
-                <img src="https://marketplace.canva.com/EAE1bgLSi2M/1/0/1245w/canva-white-free-cute-funny-cat-t-shirt-vf3P1-P68aQ.jpg" alt="trending3" class="trending-image"/>
+                <img
+                  src="https://marketplace.canva.com/EAE1bgLSi2M/1/0/1245w/canva-white-free-cute-funny-cat-t-shirt-vf3P1-P68aQ.jpg"
+                  alt="trending3"
+                  class="trending-image"
+                />
                 <div class="trending-item-text">
                   <h3 class="trending-header">@lilGat</h3>
                   <h4 class="trending-name">The little ones hit the hardest</h4>
                 </div>
               </div>
               <div class="trending-item">
-                <img src="https://media.istockphoto.com/id/1067347086/photo/cat-with-blue-eyes-looks-at-camera.webp?b=1&s=170667a&w=0&k=20&c=UvUyWWSKNX15YAuzQfsqeJholO_aRhRUU3QL-duqbWo=" alt="trending4" class="trending-image"/>
+                <img
+                  src="https://media.istockphoto.com/id/1067347086/photo/cat-with-blue-eyes-looks-at-camera.webp?b=1&s=170667a&w=0&k=20&c=UvUyWWSKNX15YAuzQfsqeJholO_aRhRUU3QL-duqbWo="
+                  alt="trending4"
+                  class="trending-image"
+                />
                 <div class="trending-item-text">
                   <h3 class="trending-header">@wildNFree</h3>
                   <h4 class="trending-name">Livin young and wild and free</h4>

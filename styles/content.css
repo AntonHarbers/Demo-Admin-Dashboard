@@ -1,217 +1,240 @@
-:root{
-    --button-background-color: rgb(0, 170, 255);
-    --search-bar-background-color: rgb(232, 232, 232);
-    --button-text-color: white;
-    --search-bar-text-color: black;
+:root {
+  --button-background-color: rgb(6, 104, 153);
+  --search-bar-background-color: rgb(232, 232, 232);
+  --button-text-color: white;
+  --search-bar-text-color: black;
 }
 
-#dashboard-container{
-    height: 80vh;
-    width: 80vw;
-    display: grid;
-    grid-template-columns: 75% 25%;
-    grid-template-rows: 50% 50%;
-    grid-template-areas: 
-        "Projects Announcements"
-        "Projects Trending"
-    ;
-    background-color: var(--search-bar-background-color);
+#dashboard-container {
+  height: 80vh;
+  width: 80vw;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas:
+    'Projects Announcements'
+    'Projects Trending';
+  background-color: var(--search-bar-background-color);
+  background-color: gray;
 }
 
-#projects-container{
-    overflow: hidden;
-    display: grid;
-    grid-area: Projects;
-    gap: 10px;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 5% 30% 30% 30%;
-    grid-template-areas:   
-        "Header Header"
-        "Item1 Item2"
-        "Item3 Item4"
-        "Item5 Item6" 
-    ;
-
+h3 {
+  color: white;
+  font-size: 30px;
+  text-shadow: 2px 2px 2px black;
 }
 
-#announcements-container{
-    grid-area: Announcements;
-    display: flex;
-    flex-direction: column;
+#projects-container {
+  overflow: hidden;
+  display: grid;
+  grid-area: Projects;
+  gap: 10px;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 5% 30% 30% 30%;
+  grid-template-areas:
+    'Header Header'
+    'Item1 Item2'
+    'Item3 Item4'
+    'Item5 Item6';
 }
 
-#trending-container{
-    grid-area: Trending;
-    display: flex;
-    flex-direction: column;
+#announcements-container {
+  grid-area: Announcements;
+  display: flex;
+  flex-direction: column;
 }
 
-#item1{
-    grid-area: Item1;
+#announcements-container > h4 {
+  color: white;
+  text-shadow: 2px 2px 2px black;
 }
 
-#item2{
-    grid-area: Item2;
+#trending-container {
+  grid-area: Trending;
+  display: flex;
+  flex-direction: column;
 }
 
-#item3{
-    grid-area: Item3;
+#trending-container > h4 {
+  color: white;
+  text-shadow: 2px 2px 2px black;
 }
 
-#item4{
-    grid-area: Item4;
+#item1 {
+  grid-area: Item1;
 }
 
-#item5{
-    grid-area: Item5;
+#item2 {
+  grid-area: Item2;
 }
 
-#item6{
-    grid-area: Item6;
+#item3 {
+  grid-area: Item3;
 }
 
-.gridPanel{
-    padding: 10px;
-    font-size: 30px;
-    font-weight: 500;
+#item4 {
+  grid-area: Item4;
 }
 
-.project-item{
-    background-color: white;
-    user-select: none;
-    padding: 20px;
-    border: 2px solid gray;
-    border-left: 5px solid red;
-    height: 80%;
-    width: 80%;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 20% 60% 20%;
-    grid-template-areas: 
-        "Header"
-        "Subheader"
-        "Buttons"
-    ;
-    border-radius: 10px;
+#item5 {
+  grid-area: Item5;
 }
 
-.project-item:hover{
-    border: 2px solid var(--button-background-color);
-    border-left: 5px solid var(--button-background-color);
-
-    transition: .2s linear;
+#item6 {
+  grid-area: Item6;
 }
 
-.project-item-header{
-    grid-area: Header;
-    font-size: 25px;
-    font-weight: 600;
+.gridPanel {
+  padding: 10px;
+  font-size: 30px;
+  font-weight: 500;
 }
 
-.project-item-subheader{
-    grid-area: Subheader;
-    font-size: 18px;
-    font-weight: 400;
+.project-item {
+  background-color: white;
+  user-select: none;
+  padding: 20px;
+  border: 2px solid gray;
+  border-left: 5px solid red;
+  height: 80%;
+  width: 80%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 20% 60% 20%;
+  grid-template-areas:
+    'Header'
+    'Subheader'
+    'Buttons';
+  border-radius: 10px;
 }
 
-.project-item-buttons{
-    grid-area: Buttons;
-    display: flex;
-    justify-content: end;
-    gap: 20px;
+.project-item:hover {
+  border: 2px solid var(--button-background-color);
+  border-left: 5px solid var(--button-background-color);
+
+  transition: 0.2s linear;
 }
 
-.project-item-button{
-    height: 40px;
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+.project-item-header {
+  grid-area: Header;
+  font-size: 25px;
+  font-weight: 600;
 }
 
-.project-item-button:hover{
-    color: var(--button-background-color);
+.project-item-subheader {
+  grid-area: Subheader;
+  font-size: 18px;
+  font-weight: 400;
 }
 
-#announcements-parent{
-    margin-top: 10px;
-    width: 95%;
-    background-color: white;
-    border-radius: 15px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+.project-item-buttons {
+  grid-area: Buttons;
+  display: flex;
+  justify-content: end;
+  gap: 20px;
 }
 
-.announcement{
-    width: 80%;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid gray;
+.project-item-button {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.05s linear;
 }
 
-.announcement-header{
-    font-size: 16px;
-    font-weight: 600;
+.project-item-button:hover {
+  color: var(--button-background-color);
 }
 
-.announcement-content{
-    font-size: 12px;
-    color: gray;
+.project-item-button:active {
+  transform: scale(0.9);
 }
 
-#trending-parent{
-    margin-top: 10px;
-    width: 95%;
-    background-color: white;
-    border-radius: 15px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+#announcements-parent {
+  margin-top: 10px;
+  width: 95%;
+  background-color: white;
+  border-radius: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
-.trending-item{
-    border-bottom: 1px solid gray;
-    height: 100%;
-    width: 90%;
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    user-select: none;
+.announcement {
+  width: 80%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
 }
 
-.trending-item>img{
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 10%;
+.announcement-header {
+  font-size: 16px;
+  font-weight: 600;
 }
 
-.trending-item-text{
-    display: flex;
-    flex-direction: column;
+.announcement-content {
+  font-size: 12px;
+  color: gray;
 }
 
-.trending-header{
-    font-size: 20px;
-    font-weight: 500;
-
+#trending-parent {
+  margin-top: 10px;
+  width: 95%;
+  background-color: white;
+  border-radius: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
-.trending-name{
-    font-size: 12px;
-    font-weight: 300;
+.trending-item {
+  border-bottom: 1px solid gray;
+  height: 100%;
+  width: 90%;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  user-select: none;
 }
 
+.trending-item > img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10%;
+  /* stretch content to fill */
+  object-fit: cover;
+  object-position: center;
+}
+
+.trending-item-text {
+  display: flex;
+  text-shadow: none;
+  flex-direction: column;
+}
+
+.trending-header {
+  font-size: 20px;
+  font-weight: 500;
+  text-shadow: none;
+  color: var(--button-background-color);
+}
+
+.trending-name {
+  font-size: 12px;
+  font-weight: 300;
+  color: black;
+}
