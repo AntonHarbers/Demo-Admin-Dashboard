@@ -5,6 +5,135 @@
   --search-bar-text-color: black;
 }
 
+h3 {
+  color: white;
+  font-size: 30px;
+  text-shadow: 2px 2px 2px black;
+}
+
+.gridPanel {
+  padding: 10px;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.project-item {
+  background-color: white;
+  padding: 20px;
+  border: 2px solid gray;
+  border-left: 5px solid red;
+  height: 80%;
+  width: 80%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 20% 60% 20%;
+  grid-template-areas:
+    'Header'
+    'Subheader'
+    'Buttons';
+  border-radius: 10px;
+}
+
+.project-item:hover {
+  border: 2px solid var(--button-background-color);
+  border-left: 5px solid var(--button-background-color);
+  transition: 0.2s linear;
+}
+
+.project-item-header {
+  grid-area: Header;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.project-item-subheader {
+  grid-area: Subheader;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.project-item-buttons {
+  grid-area: Buttons;
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+}
+
+.project-item-button {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.05s linear;
+}
+
+.project-item-button:hover {
+  color: var(--button-background-color);
+}
+
+.project-item-button:active {
+  transform: scale(0.9);
+}
+
+.announcement {
+  width: 80%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
+}
+
+.announcement-header {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.announcement-content {
+  font-size: 12px;
+  color: gray;
+}
+
+.trending-item {
+  border-bottom: 1px solid gray;
+  height: 100%;
+  width: 90%;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.trending-item > img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.trending-item-text {
+  display: flex;
+  text-shadow: none;
+  flex-direction: column;
+}
+
+.trending-header {
+  font-size: 20px;
+  font-weight: 500;
+  text-shadow: none;
+  color: var(--button-background-color);
+}
+
+.trending-name {
+  font-size: 12px;
+  font-weight: 300;
+  color: black;
+}
+
 #dashboard-container {
   height: 80vh;
   width: 80vw;
@@ -16,12 +145,6 @@
     'Projects Trending';
   background-color: var(--search-bar-background-color);
   background-color: gray;
-}
-
-h3 {
-  color: white;
-  font-size: 30px;
-  text-shadow: 2px 2px 2px black;
 }
 
 #projects-container {
@@ -84,74 +207,6 @@ h3 {
   grid-area: Item6;
 }
 
-.gridPanel {
-  padding: 10px;
-  font-size: 30px;
-  font-weight: 500;
-}
-
-.project-item {
-  background-color: white;
-  user-select: none;
-  padding: 20px;
-  border: 2px solid gray;
-  border-left: 5px solid red;
-  height: 80%;
-  width: 80%;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 20% 60% 20%;
-  grid-template-areas:
-    'Header'
-    'Subheader'
-    'Buttons';
-  border-radius: 10px;
-}
-
-.project-item:hover {
-  border: 2px solid var(--button-background-color);
-  border-left: 5px solid var(--button-background-color);
-
-  transition: 0.2s linear;
-}
-
-.project-item-header {
-  grid-area: Header;
-  font-size: 25px;
-  font-weight: 600;
-}
-
-.project-item-subheader {
-  grid-area: Subheader;
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.project-item-buttons {
-  grid-area: Buttons;
-  display: flex;
-  justify-content: end;
-  gap: 20px;
-}
-
-.project-item-button {
-  height: 40px;
-  width: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: 0.05s linear;
-}
-
-.project-item-button:hover {
-  color: var(--button-background-color);
-}
-
-.project-item-button:active {
-  transform: scale(0.9);
-}
-
 #announcements-parent {
   margin-top: 10px;
   width: 95%;
@@ -164,24 +219,6 @@ h3 {
   justify-content: center;
   align-items: center;
   gap: 10px;
-}
-
-.announcement {
-  width: 80%;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid gray;
-}
-
-.announcement-header {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.announcement-content {
-  font-size: 12px;
-  color: gray;
 }
 
 #trending-parent {
@@ -198,48 +235,44 @@ h3 {
   gap: 10px;
 }
 
-.trending-item {
-  border-bottom: 1px solid gray;
-  height: 100%;
-  width: 90%;
-  display: flex;
-  gap: 30px;
-  align-items: center;
-  user-select: none;
-}
-
-.trending-item > img {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 10%;
-  /* stretch content to fill */
-  object-fit: cover;
-  object-position: center;
-}
-
-.trending-item-text {
-  display: flex;
-  text-shadow: none;
-  flex-direction: column;
-}
-
-.trending-header {
-  font-size: 20px;
-  font-weight: 500;
-  text-shadow: none;
-  color: var(--button-background-color);
-}
-
-.trending-name {
-  font-size: 12px;
-  font-weight: 300;
-  color: black;
-}
-
 @media only screen and (max-width: 1350px) {
+  .project-item-button {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.05s linear;
+  }
+
+  .gridPanel {
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  .project-item {
+    background-color: white;
+    padding: 20px;
+    border: 2px solid gray;
+    border-left: 5px solid red;
+    height: 80%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 20% 60% 20%;
+    grid-template-areas:
+      'Header'
+      'Subheader';
+  }
+
+  .project-item {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+  }
+
   #dashboard-container {
     overflow-y: scroll;
     height: 90vh;
@@ -264,19 +297,14 @@ h3 {
     overflow-y: scroll;
   }
 
-  .project-item {
-    display: flex;
-    flex-direction: column;
-    padding: 0px;
-  }
-
   #announcements-container {
     grid-area: Announcements;
     display: flex;
     flex-direction: column;
   }
 
-  #announcements-container > h4 {
+  #announcements-container > h4,
+  #trending-container > h4 {
     color: white;
     text-shadow: 2px 2px 2px black;
   }
@@ -285,67 +313,6 @@ h3 {
     grid-area: Trending;
     display: flex;
     flex-direction: column;
-  }
-
-  #trending-container > h4 {
-    color: white;
-    text-shadow: 2px 2px 2px black;
-  }
-
-  #item1 {
-    grid-area: Item1;
-  }
-
-  #item2 {
-    grid-area: Item2;
-  }
-
-  #item3 {
-    grid-area: Item3;
-  }
-
-  #item4 {
-    grid-area: Item4;
-  }
-
-  #item5 {
-    grid-area: Item5;
-  }
-
-  #item6 {
-    grid-area: Item6;
-  }
-
-  .project-item-button {
-    height: 40px;
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: 0.05s linear;
-  }
-
-  .gridPanel {
-    padding: 10px;
-    font-size: 30px;
-    font-weight: 500;
-  }
-
-  .project-item {
-    background-color: white;
-    user-select: none;
-    padding: 20px;
-    border: 2px solid gray;
-    border-left: 5px solid red;
-    height: 80%;
-    width: 80%;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 20% 60% 20%;
-    grid-template-areas:
-      'Header'
-      'Subheader';
   }
 
   #trending-container {
