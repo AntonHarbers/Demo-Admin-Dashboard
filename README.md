@@ -2,7 +2,7 @@
 
 A reactive admin dashboard created using html, css and javascript for the odin project.
 
-[Live Link](https://antonharbers.github.io/Odin-Dashboard/)
+[Live Link](https://antonharbers.github.io/Demo-Admin-Dashboard/)
 
 ![Screenshot of Daschboard Page](/images/repoImage.png)
 
